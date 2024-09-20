@@ -1,37 +1,36 @@
+# Подключаем библиотеки
 import colour
 import cv2 as cv
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-from matplotlib import cm
 
+# Выбераем параметры стандарта 'Wright & Guild 1931 2 Degree RGB CMFs'
 color_mf = colour.colorimetry.MSDS_CMFS_RGB['Wright & Guild 1931 2 Degree RGB CMFs']
-weiw = color_mf.wavelengths
+# Список длин волн
+wl = color_mf.wavelengths
+# Список коэффициентов восприимчивости глазом длин волн света
 mf = color_mf.values
-def interf(lambda1, r1, r2, d, n=1.7):
+
+# Функция интерференции
+def interf(wavelength, r1, r2, d, n=1.7):
+
     if r2 > 10 - r1:
         r2 = 10 - r1
-        a = r2*np.cos(4*np.pi*n*d/lambda1)
-    return abs(r1 + a)
+    amplitude = r2*np.cos(4*np.pi*n*d/wavelength)
+    return abs(r1 + amplitude)
 
+# Максимальная толщина пленки
 d_max = 1500
-k = [d for d in range(d_max)]
-k_s = np.array([k] * len(weiw))
-weiw_f = np.array([weiw]*d_max)
-print(weiw_f.shape)
+
+# Спискок толщин
+d_list = [d for d in range(d_max)]
+
+rect_img = np.zeros((100, d_max, 3))
 for r1 in range(1,10):
-    r2 = 10-r1
-    s_1050 = [[interf(lam, r1, r2, d) for lam in weiw] \
-        for d in k]
-    fig = plt.figure(figsize=(20,20))
-    ax = fig.add_subplot(111, projection='3d')
-    # print(lens_1050.shape)
-    s = np.array(s_1050)
-    print(s.shape, len(k), len(weiw), s.max())
-    ax.plot_surface(weiw_f,k_s.T, s, cmap = cm.plasma)
-    img = s.dot(np.array(mf))
-    img1 = img/73.0303
-    print(img.max())
-    img2 = np.zeros((100, d_max, 3))
-    img2[:] = img1
-    cv.imwrite(f'img_{r1}_{r2}.bmp',img2 * 255)
+    r2 = 10 - r1
+    color_line = [[interf(lam, r1, r2, d) for lam in wl] \
+        for d in d_list]
+    np_color_line = np.array(color_line)
+    img = np_color_line.dot(np.array(mf))
+    norm_img = img / img.max()
+    rect_img[:] = norm_img
+    cv.imwrite(f'img_{r1}_{r2}.bmp', rect_img * 255)

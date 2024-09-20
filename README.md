@@ -3,21 +3,21 @@ In this project, images of oxide films of different thicknesses were modeled by 
 R1 = 10%, R2 = 90%
 ![Dependence of color on film thickness with reflection coefficients R1 = 10%, R2 = 90%.](/img_1_9.bmp)
 R1 = 20%, R2 = 80%
-![Dependence of color on film thickness with reflection coefficients R1 = 10%, R2 = 90%.](/img_2_8.bmp)
+![Dependence of color on film thickness with reflection coefficients R1 = 20%, R2 = 80%.](/img_2_8.bmp)
 R1 = 30%, R2 = 70%
-![Dependence of color on film thickness with reflection coefficients R1 = 10%, R2 = 90%.](/img_3_7.bmp)
+![Dependence of color on film thickness with reflection coefficients R1 = 30%, R2 = 70%.](/img_3_7.bmp)
 R1 = 40%, R2 = 60%
-![Dependence of color on film thickness with reflection coefficients R1 = 10%, R2 = 90%.](/img_4_6.bmp)
+![Dependence of color on film thickness with reflection coefficients R1 = 40%, R2 = 60%.](/img_4_6.bmp)
 R1 = 50%, R2 = 50%
-![Dependence of color on film thickness with reflection coefficients R1 = 10%, R2 = 90%.](/img_5_5.bmp)
+![Dependence of color on film thickness with reflection coefficients R1 = 50%, R2 = 50%.](/img_5_5.bmp)
 R1 = 60%, R2 = 40%
-![Dependence of color on film thickness with reflection coefficients R1 = 10%, R2 = 90%.](/img_6_4.bmp)
+![Dependence of color on film thickness with reflection coefficients R1 = 60%, R2 = 40%.](/img_6_4.bmp)
 R1 = 70%, R2 = 30%
-![Dependence of color on film thickness with reflection coefficients R1 = 10%, R2 = 90%.](/img_7_3.bmp)
+![Dependence of color on film thickness with reflection coefficients R1 = 70%, R2 = 30%.](/img_7_3.bmp)
 R1 = 80%, R2 = 20%
-![Dependence of color on film thickness with reflection coefficients R1 = 10%, R2 = 90%.](/img_8_2.bmp)
+![Dependence of color on film thickness with reflection coefficients R1 = 80%, R2 = 20%.](/img_8_2.bmp)
 R1 = 90%, R2 = 10%
-![Dependence of color on film thickness with reflection coefficients R1 = 10%, R2 = 90%.](/img_9_1.bmp)
+![Dependence of color on film thickness with reflection coefficients R1 = 90%, R2 = 10%.](/img_9_1.bmp)
 
 
 The model is based on the sensitivity of the color-sensitive sensors of the human eye. Following standards were used: 'Wright & Guild 1931 2 Degree RGB CMFs'.

@@ -1,5 +1,6 @@
 # Main interf
 In this project, images of oxide films of different thicknesses were modeled by changing the reflection coefficients at the air-oxide and oxide-metal interfaces.
+
 R1 = 10%, R2 = 90%
 ![Dependence of color on film thickness with reflection coefficients R1 = 10%, R2 = 90%.](/img_1_9.bmp)
 R1 = 20%, R2 = 80%
@@ -23,6 +24,7 @@ R1 = 90%, R2 = 10%
 The model is based on the sensitivity of the color-sensitive sensors of the human eye. Following standards were used: 'Wright & Guild 1931 2 Degree RGB CMFs'.
 
 The model showed why it is impossible to see bright colors on thick films. This occurs due to the large number of intensity peaks in the visible spectrum, all three sensors of the eye are excited and the color is perceived as gray. There is an image of a graph of one of the gray colors of a thick film of the dependence of light intensity on wavelength.
+
 ![Dependence of interference intensity on wavelength for a thick film.](/1000nm0.9_0.1.png)
 
 ## Results
